@@ -20,7 +20,7 @@ jobs:
       uses: actions/setup-java@v2
       with:
         java-version: '11'
-        distribution: '<distribution>'
+        distribution: 'temurin'
         jdkFile: C:\Missions
         settings-path: C:\Missions\maven\.m2
         

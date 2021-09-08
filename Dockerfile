@@ -1,3 +1,3 @@
-# create a directory to work in
-mkdir example
-cd example
+FROM busybox
+RUN echo "hello world"
+EO

@@ -26,3 +26,14 @@ jobs:
         
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+ 
+    - uses: mr-smithers-excellent/docker-build-push@v4
+    - name: Build & push Docker image
+      with:
+        image: ghassa1973/test
+        tags: v1, latest
+        registry: registry-url.io
+        dockerfile: Dockerfile.ci
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+  
